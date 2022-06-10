@@ -25,8 +25,7 @@ namespace Lion.AbpPro.DataDictionaryManagement.DataDictionaries.Dto
         /// 英文显示名
         /// </summary>
         public string DisplayText { get;  set; }
-
-
+        
         /// <summary>
         /// 描述
         /// </summary>

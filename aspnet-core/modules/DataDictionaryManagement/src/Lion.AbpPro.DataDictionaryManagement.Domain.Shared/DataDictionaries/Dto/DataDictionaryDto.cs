@@ -45,6 +45,6 @@ namespace Lion.AbpPro.DataDictionaryManagement.DataDictionaries.Dto
             return string.Format(CacheKeyFormat,
                 id?.ToString() ?? "null",
                 (code.IsNullOrWhiteSpace() ? "null" : code));
-        } 
+        }
     }
 }

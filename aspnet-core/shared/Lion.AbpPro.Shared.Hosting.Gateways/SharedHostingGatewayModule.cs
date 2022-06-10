@@ -13,7 +13,6 @@ namespace Lion.AbpPro.Shared.Hosting.Gateways
         typeof(AbpAutofacModule))]
     public class SharedHostingGatewayModule : AbpModule
     {
-   
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
             ConfigureOcelot(context);
@@ -28,6 +27,7 @@ namespace Lion.AbpPro.Shared.Hosting.Gateways
             var configuration = context.Services.GetConfiguration();
             context.Services.AddOcelot(configuration).AddConsul().AddPolly();
         }
+
         /// <summary>
         /// 健康检查
         /// </summary>

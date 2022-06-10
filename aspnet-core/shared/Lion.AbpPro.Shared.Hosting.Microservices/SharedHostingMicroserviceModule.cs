@@ -32,18 +32,16 @@ namespace Lion.AbpPro.Shared.Hosting.Microservices
             ConfigAntiForgery();
         }
 
-  
+
         /// <summary>
         /// 阻止跨站点请求伪造
         /// https://docs.microsoft.com/zh-cn/aspnet/core/security/anti-request-forgery?view=aspnetcore-6.0
         /// </summary>
         private void ConfigAntiForgery()
         {
-            Configure<AbpAntiForgeryOptions>(options =>
-            {
-                options.AutoValidate = false;
-            });
+            Configure<AbpAntiForgeryOptions>(options => { options.AutoValidate = false; });
         }
+
         private void ConfigureConsul(ServiceConfigurationContext context,
             IConfiguration configuration)
         {
@@ -52,8 +50,6 @@ namespace Lion.AbpPro.Shared.Hosting.Microservices
                 context.Services.AddConsulConfig(configuration);
             }
         }
-
-
 
         /// <summary>
         /// 配置跨域
@@ -80,7 +76,6 @@ namespace Lion.AbpPro.Shared.Hosting.Microservices
                 });
             });
         }
-
 
         /// <summary>
         /// 站点配置

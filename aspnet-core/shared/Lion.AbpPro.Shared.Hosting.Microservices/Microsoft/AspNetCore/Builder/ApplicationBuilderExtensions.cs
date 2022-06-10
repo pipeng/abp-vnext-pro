@@ -22,7 +22,7 @@ namespace Lion.AbpPro.Shared.Hosting.Microservices.Microsoft.AspNetCore.Builder
             Uri appUrl = new Uri(appString, UriKind.Absolute);
 
             if (!isEnabled)
-                return String.Empty;
+                return string.Empty;
 
             Guid serviceId = Guid.NewGuid();
             string consulServiceId = $"{serviceName}:{serviceId}";
